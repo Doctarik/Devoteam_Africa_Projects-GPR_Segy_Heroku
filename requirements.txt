@@ -49,8 +49,8 @@ idna==3.3
 importlib-metadata==4.11.3
 importlib-resources==5.7.1
 ipykernel==6.13.0
-ipympl==0.9.1
-ipython==8.3.0
+ipympl==0.7.0
+ipython==7.34.0
 ipython-genutils==0.2.0
 ipywidgets==7.7.0
 itsdangerous==2.1.2
