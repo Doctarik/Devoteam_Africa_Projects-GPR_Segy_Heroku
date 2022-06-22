@@ -32,7 +32,6 @@ if uploaded_file is not None:
     path_file_in   = "/home/doctarik/Devoteam_Africa_Projects/GPR/segy2xyz/segydata_in/"
     path_file_out  = "/home/doctarik/Devoteam_Africa_Projects/GPR/segy2xyz/segydata_out/"
     filename       = path_file_in + uploaded_file.name
-
     f = segyio.open(filename, ignore_geometry = True)
     # Memory map file for faster reading (especially if file is big...)
     f.mmap()
