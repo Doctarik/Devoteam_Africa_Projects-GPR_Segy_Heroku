@@ -29,9 +29,10 @@ st.title("Study of the subsurface of archaeological sites and the environment us
 uploaded_file = st.sidebar.file_uploader("Choose a Segy file")
 if uploaded_file is not None:
     st.write("The filename:\t", uploaded_file.name)
-    path_file_in   = "/home/doctarik/Devoteam_Africa_Projects/GPR/segy2xyz/segydata_in/"
-    path_file_out  = "/home/doctarik/Devoteam_Africa_Projects/GPR/segy2xyz/segydata_out/"
-    filename       = path_file_in + uploaded_file.name
+    #path_file_in   = "/home/doctarik/Devoteam_Africa_Projects/GPR/segy2xyz/segydata_in/"
+    #path_file_out  = "/home/doctarik/Devoteam_Africa_Projects/GPR/segy2xyz/segydata_out/"
+    #filename       = path_file_in + uploaded_file.name
+    filename       = "https://github.com/Doctarik/Devoteam_Africa_Projects-GPR_Segy_Heroku/blob/master/segydata_in/3D_DAT_0192_ibm_format.SGY"
     f = segyio.open(filename, ignore_geometry = True)
     # Memory map file for faster reading (especially if file is big...)
     f.mmap()
