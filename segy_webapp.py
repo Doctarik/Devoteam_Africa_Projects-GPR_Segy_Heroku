@@ -19,7 +19,7 @@ from IPython.display import Image
 from IPython.core.display import HTML
 from IPython.display import display
 from matplotlib.patches import Polygon
-from pathlib import Path
+#from pathlib import Path
 
 st.title("Study of the subsurface of archaeological sites and the environment using the geophysical method of remote sensing based on GPR")
 #st.markdown("ceci est un test")
@@ -29,9 +29,9 @@ uploaded_file = st.sidebar.file_uploader("Choose a Segy file")
 if uploaded_file is not None:
     st.write("The filename:\t", uploaded_file.name)
     #path_file_in   = "/home/doctarik/Devoteam_Africa_Projects/GPR/segy2xyz/segydata_in/"
-    #path_file_out  = "/home/doctarik/Devoteam_Africa_Projects/GPR/segy2xyz/segydata_out/"
+    path_file_out  = r"/home/doctarik/Devoteam_Africa_Projects/GPR/segy2xyz/segydata_out/"
     #filename       = path_file_in + uploaded_file.name
-    filename       = Path(r"https://github.com/Doctarik/Devoteam_Africa_Projects-GPR_Segy_Heroku/blob/dfb8ec5c54cf17ce86ca56c74faff926074f5a5b/segydata_in/3D_DAT_0192_ibm_format.SGY")
+    filename       = r'https://github.com/Doctarik/Devoteam_Africa_Projects-GPR_Segy_Heroku/blob/dfb8ec5c54cf17ce86ca56c74faff926074f5a5b/segydata_in/3D_DAT_0192_ibm_format.SGY'
     f = segyio.open(filename, mode="r", ignore_geometry = True)
     # Memory map file for faster reading (especially if file is big...)
     f.mmap()
